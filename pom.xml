@@ -7,6 +7,9 @@
     <groupId>academy.devdojo</groupId>
     <artifactId>springboot2-essential</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <properties>
+        <java.version>11</java.version>
+    </properties>
 
     <!-- configuração inicial do projeto MAVEN -->
     <parent>

@@ -21,4 +21,4 @@ https://github.com/spring-projects/spring-boot/wiki#release-notes
 
 # Spring Start 
 * Ferramenta que auxilia a criação do projeto inicial spring
-https://start.spring.io/
+https://academy.devdojo.springboot2.start.spring.io/

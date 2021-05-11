@@ -24,4 +24,4 @@ https://spring.io/projects/spring-boot
 
 Ferramenta que auxilia a criação do projeto inicial spring
 
-- https://academy.devdojo.springboot2.start.spring.io/
+- https://start.spring.io/

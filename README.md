@@ -10,16 +10,18 @@ https://www.youtube.com/watch?v=bCzsSXE4Jzg&list=PL62G310vn6nFBIxp6ZwGnm8xMcGE3V
 
 https://spring.io/projects/spring-boot
 
- # O que é o SpringBoot ?
+## O que é o SpringBoot ?
 
- - Framework com o mínimo de configurações possível
- - Projetos Stand Alone prontos para produção
+- Framework com o mínimo de configurações possível
+- Projetos Stand Alone prontos para produção
 
 ## GitHub do projeto SpringBoot
 
-https://github.com/spring-projects/spring-boot/wiki#release-notes
+- Principal: https://github.com/spring-projects/spring-boot
+- Atualizações: https://github.com/spring-projects/spring-boot/wiki#release-notes
 
 ## Spring Start 
 
-- Ferramenta que auxilia a criação do projeto inicial spring
-https://academy.devdojo.springboot2.start.spring.io/
+Ferramenta que auxilia a criação do projeto inicial spring
+
+- https://academy.devdojo.springboot2.start.spring.io/

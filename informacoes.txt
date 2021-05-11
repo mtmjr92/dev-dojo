@@ -1,0 +1,5 @@
+Spring Boot 2 Essentials 04 - @Component, @Autowired, @SpringBootApplication
+
+- Foi removido a pasta start
+- O lombook necessita instalação do plugin na IDE
+- Necessita habilitar => anotações de processamento na IDE

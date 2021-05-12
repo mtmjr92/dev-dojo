@@ -3,3 +3,10 @@ Spring Boot 2 Essentials 04 - @Component, @Autowired, @SpringBootApplication
 - Foi removido a pasta start
 - O lombook necessita instalação do plugin na IDE
 - Necessita habilitar => anotações de processamento na IDE
+
+Spring Boot 2 Essentials 05 - Hot Swap com Spring Boot Devtools
+
+- auxlia em pequenas mudanças no fonte
+- auxilia no carregamento da aplicação o build fica mais rápido
+- quando se altera um método somente fazer o build já atualiza automático
+- quando se troca no ou cria um método o hot swap não funciona

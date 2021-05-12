@@ -1,6 +1,8 @@
 package academy.devdojo.springboot2.controller;
 
 import academy.devdojo.springboot2.domain.Anime;
+import academy.devdojo.springboot2.requests.AnimePostRequestBody;
+import academy.devdojo.springboot2.requests.AnimePutRequestBody;
 import academy.devdojo.springboot2.service.AnimeService;
 import academy.devdojo.springboot2.util.DateUtil;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +33,7 @@ public class AnimeController {
 
     /**
      * Retorna lista de animes
-     * @return
+     * @return retorna lista completa de animes
      */
     @GetMapping
     public ResponseEntity<List<Anime>> lists() {
@@ -52,7 +54,7 @@ public class AnimeController {
     @GetMapping(path = "/{id}")
     public ResponseEntity<Anime> findById(@PathVariable("id") Long id) {
         log.info("Endpoit por ID => {}", id);
-        return ResponseEntity.ok(animeService.findById(id));
+        return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
 
     @PostMapping
@@ -60,7 +62,7 @@ public class AnimeController {
         Pode-se utilizar a notação para retornar um status
     */
     //@ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Anime> save(@RequestBody Anime anime) {
+    public ResponseEntity<Anime> save(@RequestBody AnimePostRequestBody anime) {
         log.info("Endpoit POST => {}", anime);
         return new ResponseEntity<>(animeService.save(anime), HttpStatus.CREATED);
     }
@@ -73,9 +75,9 @@ public class AnimeController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> replace(@RequestBody Anime anime) {
-        log.info("Endpoit PUT => {}", anime);
-        animeService.replace(anime);
+    public ResponseEntity<Void> replace(@RequestBody AnimePutRequestBody animePutRequestBody) {
+        log.info("Endpoit PUT => {}", animePutRequestBody);
+        animeService.replace(animePutRequestBody);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 

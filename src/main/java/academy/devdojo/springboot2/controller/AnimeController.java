@@ -72,4 +72,11 @@ public class AnimeController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
+    @PutMapping
+    public ResponseEntity<Void> replace(@RequestBody Anime anime) {
+        log.info("Endpoit PUT => {}", anime);
+        animeService.replace(anime);
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
 }

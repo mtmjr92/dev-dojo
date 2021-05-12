@@ -30,3 +30,9 @@ https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2
 | PUT     | no   | yes        | Section 4.3.4 |
 | TRACE   | yes  | yes        | Section 4.3.8 |
 +---------+------+------------+---------------+
+
+
+Spring Boot 2 Essentials 12 - Instalando Docker e executando container MySQL
+
+sudo docker ps => listar os containers
+sudo docker ps -a

@@ -10,3 +10,23 @@ Spring Boot 2 Essentials 05 - Hot Swap com Spring Boot Devtools
 - auxilia no carregamento da aplicação o build fica mais rápido
 - quando se altera um método somente fazer o build já atualiza automático
 - quando se troca no ou cria um método o hot swap não funciona
+
+Spring Boot 2 Essentials 10 - Método DELETE
+
+- idempotencia nao alterar o estado do servidor => PUT, DELETE
+
+https://tools.ietf.org/
+https://datatracker.ietf.org/doc/html/rfc7231#section-4.2.2
+
++---------+------+------------+---------------+
+| Method  | Safe | Idempotent | Reference     |
++---------+------+------------+---------------+
+| CONNECT | no   | no         | Section 4.3.6 |
+| DELETE  | no   | yes        | Section 4.3.5 |
+| GET     | yes  | yes        | Section 4.3.1 |
+| HEAD    | yes  | yes        | Section 4.3.2 |
+| OPTIONS | yes  | yes        | Section 4.3.7 |
+| POST    | no   | no         | Section 4.3.3 |
+| PUT     | no   | yes        | Section 4.3.4 |
+| TRACE   | yes  | yes        | Section 4.3.8 |
++---------+------+------------+---------------+

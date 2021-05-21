@@ -7,4 +7,9 @@ import java.util.List;
 
 public interface AnimeRepository extends JpaRepository<Anime, Long> {
 
+    /*
+        mapeado automaticamente pelo String
+    */
+    List<Anime> findByName(String name);
+
 }

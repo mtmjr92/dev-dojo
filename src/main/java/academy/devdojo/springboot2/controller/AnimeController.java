@@ -57,11 +57,17 @@ public class AnimeController {
         return ResponseEntity.ok(animeService.findByIdOrThrowBadRequestException(id));
     }
 
-    @PostMapping
+    @GetMapping(path = "/find")
+    public ResponseEntity<List<Anime>> findByName(@RequestParam(required = false, defaultValue = "") String name) {
+        log.info("Endpoit por NAME => {}", name);
+        return ResponseEntity.ok(animeService.findByName(name));
+    }
+
     /*
         Pode-se utilizar a notação para retornar um status
     */
     //@ResponseStatus(HttpStatus.CREATED)
+    @PostMapping
     public ResponseEntity<Anime> save(@RequestBody AnimePostRequestBody anime) {
         log.info("Endpoit POST => {}", anime);
         return new ResponseEntity<>(animeService.save(anime), HttpStatus.CREATED);

@@ -8,6 +8,7 @@ import academy.devdojo.springboot2.requests.AnimePostRequestBody;
 import academy.devdojo.springboot2.requests.AnimePutRequestBody;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -31,8 +32,17 @@ public class AnimeService {
                 .orElseThrow(() -> new BadRequestException("ANIME NOT FOUND"));
     }
 
+    /* notação utilizada pera capturar exceções do tipo checked */
+    //@Transactional(rollbackFor = Exception.class)
+    @Transactional
     public Anime save(AnimePostRequestBody animePostRequestBody) {
-        return animeRepository.saveAndFlush(AnimeMapper.INSTANCE.toAnime(animePostRequestBody));
+        Anime save = animeRepository.saveAndFlush(AnimeMapper.INSTANCE.toAnime(animePostRequestBody));
+
+        if (true) {
+            throw new RuntimeException("bad code");
+        }
+
+        return save;
     }
 
     public void delete(Long id) {

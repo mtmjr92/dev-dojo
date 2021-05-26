@@ -39,8 +39,11 @@ sudo docker ps -a
 
 Spring Boot 2 Essentials 13 - Spring Data JPA pt 01
 
-
 Spring Boot 2 Essentials 19 - Transações
 
 - Exceções do tipo checked não são pegas pelo @Transaction
 - link (hierarquia de exceções) : https://medium.com/@iroshan.du/exception-handling-in-java-f430027d60bf
+
+Spring Boot 2 Essentials 21 - Handler para validação de campos
+
+no link para descobir uma exceção utilizar na URL ?trace=true

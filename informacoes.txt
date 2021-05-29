@@ -47,3 +47,7 @@ Spring Boot 2 Essentials 19 - Transações
 Spring Boot 2 Essentials 21 - Handler para validação de campos
 
 no link para descobir uma exceção utilizar na URL ?trace=true
+
+Spring Boot 2 Essentials 24 - WebMvcConfigurer
+
+trocar o padrao do tamanhos das paginas

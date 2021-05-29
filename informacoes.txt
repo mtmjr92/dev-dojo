@@ -51,3 +51,9 @@ no link para descobir uma exceção utilizar na URL ?trace=true
 Spring Boot 2 Essentials 24 - WebMvcConfigurer
 
 trocar o padrao do tamanhos das paginas
+
+Spring Boot 2 Essentials 25 - Sorting, Log SQL
+
+http://localhost:8080/animes?size=10&sort=name,asc
+http://localhost:8080/animes?size=10&sort=id,asc
+http://localhost:8080/animes?size=10&sort=id,desc

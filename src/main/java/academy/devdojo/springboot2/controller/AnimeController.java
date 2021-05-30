@@ -48,10 +48,10 @@ public class AnimeController {
      * Endpoit para listar os Animes
      * @return retorna uma lista de Animes
      */
-    @GetMapping(path = "list")
-    public Page<Anime> list(Pageable pageable) {
+    @GetMapping(path = "all")
+    public List<Anime> listAll() {
         log.info(dateUtil.formatLocalDateTimeToDataBaseStyle(LocalDateTime.now()));
-        return animeService.listAll(pageable);
+        return animeService.listAllNonPageable();
     }
 
     @GetMapping(path = "/{id}")

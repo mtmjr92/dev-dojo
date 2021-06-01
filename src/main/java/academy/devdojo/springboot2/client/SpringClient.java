@@ -30,12 +30,30 @@ public class SpringClient {
         Anime kingdomSaved = new RestTemplate().postForObject("http://localhost:8080/animes", kingdom, Anime.class);
         log.info("Saved Anime {}", kingdomSaved);
 
-        Anime samuraiChamploo = Anime.builder().name("Samui Champloo").build();
+        Anime samuraiChamploo = Anime.builder().name("Samurai Champloo").build();
         ResponseEntity<Anime> samuraiChamplooSaved = new RestTemplate().exchange("http://localhost:8080/animes",
                 HttpMethod.POST,
                 new HttpEntity<>(samuraiChamploo, createJsonHeaders()),
                 Anime.class);
         log.info("Saved Anime {}", samuraiChamplooSaved);
+
+        Anime animeSaved = samuraiChamplooSaved.getBody();
+        animeSaved.setName("Samui Champloo 2");
+
+        ResponseEntity<Void> samuraiChamplooUpdated = new RestTemplate().exchange("http://localhost:8080/animes",
+                HttpMethod.PUT,
+                new HttpEntity<>(samuraiChamploo, createJsonHeaders()),
+                Void.class);
+
+        log.info("PUT Anime {}", samuraiChamplooUpdated);
+
+        ResponseEntity<Void> samuraiChamplooDelete = new RestTemplate().exchange("http://localhost:8080/animes/{id}",
+                HttpMethod.DELETE,
+                null,
+                Void.class,
+                animeSaved.getId());
+
+        log.info("DELETE Anime {}", samuraiChamplooDelete);
 
     }
 

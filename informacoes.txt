@@ -57,3 +57,7 @@ Spring Boot 2 Essentials 25 - Sorting, Log SQL
 http://localhost:8080/animes?size=10&sort=name,asc
 http://localhost:8080/animes?size=10&sort=id,asc
 http://localhost:8080/animes?size=10&sort=id,desc
+
+Spring Boot 2 Essentials 30 - Spring Data JPA Test pt 01
+
+- alt+enter na classe , para criar uma classe de teste

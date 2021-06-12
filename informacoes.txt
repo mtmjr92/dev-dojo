@@ -67,3 +67,7 @@ Spring Boot 2 Essentials 33 - Unit Tests pt 01
 - @ExtendWith -> utilizar o Junit com o Spring
 - @InjectMocks -> testar a classe em si
 - @Mock -> utiliza as classes que estao dentro da classe que você quer testar
+
+Spring Boot 2 Essentials 36 - Testes de Integração pt 01
+
+- teste de integração roda junto com aplicação

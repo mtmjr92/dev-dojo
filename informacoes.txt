@@ -61,3 +61,9 @@ http://localhost:8080/animes?size=10&sort=id,desc
 Spring Boot 2 Essentials 30 - Spring Data JPA Test pt 01
 
 - alt+enter na classe , para criar uma classe de teste
+
+Spring Boot 2 Essentials 33 - Unit Tests pt 01
+
+- @ExtendWith -> utilizar o Junit com o Spring
+- @InjectMocks -> testar a classe em si
+- @Mock -> utiliza as classes que estao dentro da classe que você quer testar

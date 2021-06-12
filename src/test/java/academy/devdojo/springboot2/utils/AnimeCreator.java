@@ -10,14 +10,14 @@ public class AnimeCreator {
                 .build();
     }
 
-    public static Anime createAnimeValidAnime() {
+    public static Anime createValidAnime() {
         return Anime.builder()
                 .name("Hajime no Ippo")
                 .id(1L)
                 .build();
     }
 
-    public static Anime createAnimeValidUpdatedAnime() {
+    public static Anime createValidUpdatedAnime() {
         return Anime.builder()
                 .name("Hajime no Ippo2")
                 .id(1L)

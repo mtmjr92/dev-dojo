@@ -7,6 +7,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.List;
+import java.util.Optional;
+
 @DataJpaTest
 @DisplayName("Tests for Anime Repository")
 class AnimeRepositoryTest {
@@ -22,6 +25,44 @@ class AnimeRepositoryTest {
         Assertions.assertThat(save).isNotNull(); // certifique que
         Assertions.assertThat(save.getId()).isNotNull();
         Assertions.assertThat(save.getName()).isEqualTo(anime.getName());
+    }
+
+    @Test
+    @DisplayName("Save updates when Successful")
+    public void save_UpdatesAnime_WhenSuccessful() {
+        Anime anime = createAnime();
+        Anime save = this.animeRepository.save(anime);
+        save.setName("Overlord");
+        Anime animeUpdated = this.animeRepository.save(save);
+
+        Assertions.assertThat(animeUpdated).isNotNull();
+        Assertions.assertThat(animeUpdated.getId()).isNotNull();
+        Assertions.assertThat(animeUpdated.getName()).isEqualTo(save.getName());
+    }
+
+    @Test
+    @DisplayName("Delete removes when Successful")
+    public void delete_RemovesAnime_WhenSuccessful() {
+        Anime animeToBeSaved = createAnime();
+        Anime animeSaved = this.animeRepository.save(animeToBeSaved);
+
+        this.animeRepository.delete(animeSaved);
+        Optional<Anime> animeOptional = this.animeRepository.findById(animeSaved.getId());
+
+        Assertions.assertThat(animeOptional).isEmpty();
+    }
+
+    @Test
+    @DisplayName("Find By Name returns list of animes when Successful")
+    public void findByName_RetunrsListOfAnime_WhenSuccessful() {
+        Anime animeToBeSaved = createAnime();
+        Anime animeSaved = this.animeRepository.save(animeToBeSaved);
+
+        String name = animeSaved.getName();
+        List<Anime> animes = this.animeRepository.findByName(name);
+
+        Assertions.assertThat(animes).isNotEmpty();
+        Assertions.assertThat(animes).contains(animeSaved);
     }
 
     private Anime createAnime() {

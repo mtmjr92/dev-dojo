@@ -80,3 +80,9 @@ metodo do teste executado
 Spring Boot 2 Essentials 38 - Maven Profile Para Testes de Integração
 
 - mvn test -Pintegration-tests
+
+Spring Boot 2 Essentials 39 - Spring Security pt 01 - Autenticação em memória
+
+- ao inmportar a dependencia de seguranca, o spring começa a gerar uma senha de autenticacao, utiliza o
+Basic Auth => user => "senha gerada"
+- security filter chain

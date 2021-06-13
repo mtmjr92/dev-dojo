@@ -76,3 +76,7 @@ Spring Boot 2 Essentials 37 - Testes de Integração pt 02
 
 - @DirtiesContext , antes de cada teste cosidera como sujo, dar um drop no banco inteiro e recriar para cada
 metodo do teste executado
+
+Spring Boot 2 Essentials 38 - Maven Profile Para Testes de Integração
+
+- mvn test -Pintegration-tests

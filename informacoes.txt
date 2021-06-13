@@ -71,3 +71,8 @@ Spring Boot 2 Essentials 33 - Unit Tests pt 01
 Spring Boot 2 Essentials 36 - Testes de Integração pt 01
 
 - teste de integração roda junto com aplicação
+
+Spring Boot 2 Essentials 37 - Testes de Integração pt 02
+
+- @DirtiesContext , antes de cada teste cosidera como sujo, dar um drop no banco inteiro e recriar para cada
+metodo do teste executado

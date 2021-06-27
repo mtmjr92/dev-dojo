@@ -86,3 +86,8 @@ Spring Boot 2 Essentials 39 - Spring Security pt 01 - Autenticação em memória
 - ao inmportar a dependencia de seguranca, o spring começa a gerar uma senha de autenticacao, utiliza o
 Basic Auth => user => "senha gerada"
 - security filter chain
+
+Spring Boot 2 Essentials 40 - Spring Security pt 01 - CSRF Token
+
+- pode ser desabilitado por padrao no sptring
+- CSRF Token (cross-site request forgery) - alguem executa uma ação em seu nome

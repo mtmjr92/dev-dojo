@@ -76,18 +76,19 @@ public class AnimeController {
         return ResponseEntity.ok(animeService.findByName(name));
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+
     /*
         Pode-se utilizar a notação para retornar um status
     */
     //@ResponseStatus(HttpStatus.CREATED)
+    //@PreAuthorize("hasRole('ADMIN')")
     @PostMapping
     public ResponseEntity<Anime> save(@RequestBody @Valid AnimePostRequestBody anime) {
         log.info("Endpoit POST => {}", anime);
         return new ResponseEntity<>(animeService.save(anime), HttpStatus.CREATED);
     }
 
-    @DeleteMapping(path = "/{id}")
+    @DeleteMapping(path = "admin/{id}")
     public ResponseEntity<Anime> delete(@PathVariable Long id) {
         log.info("Endpoit DELETE => {}", id);
         animeService.delete(id);

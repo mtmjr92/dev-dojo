@@ -121,3 +121,14 @@ Spring Boot 2 Essentials 50 - Monitorando métricas com gráficos no Grafana
 
 - https://grafana.com/
 - https://grafana.com/grafana/dashboards/4701
+
+Spring Boot 2 Essentials 51 - Criado imagem com jib e executando via docker-compose
+
+- https://github.com/GoogleContainerTools/jib
+- mvn jib:dockerBuild -> apenas local
+- docker-compose down / docker-compose up
+- docker image rmi -f 27eb4ade9635
+- docker image ls
+- docker login
+- mvn jib:build -> faz o push
+

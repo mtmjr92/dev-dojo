@@ -5,7 +5,10 @@ import academy.devdojo.springboot2.requests.AnimePostRequestBody;
 import academy.devdojo.springboot2.requests.AnimePutRequestBody;
 import academy.devdojo.springboot2.service.AnimeService;
 import academy.devdojo.springboot2.util.DateUtil;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springdoc.api.annotations.ParameterObject;
@@ -40,9 +43,13 @@ public class AnimeController {
 
     /**
      * Retorna lista de animes
+     *
      * @return retorna lista completa de animes
      */
     @GetMapping
+    @Operation(summary = "List all animes paginated",
+            description = "The default size is 20, use the parameter size to change the default value",
+            tags = {"anime"})
     public ResponseEntity<Page<Anime>> lists(@ParameterObject Pageable pageable) {
         log.info(dateUtil.formatLocalDateTimeToDataBaseStyle(LocalDateTime.now()));
         return new ResponseEntity<>(animeService.listAll(pageable), HttpStatus.OK);
@@ -50,6 +57,7 @@ public class AnimeController {
 
     /**
      * Endpoit para listar os Animes
+     *
      * @return retorna uma lista de Animes
      */
     @GetMapping(path = "all")
@@ -89,6 +97,9 @@ public class AnimeController {
         return new ResponseEntity<>(animeService.save(anime), HttpStatus.CREATED);
     }
 
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "204", description = "Successful Operation"),
+            @ApiResponse(responseCode = "400", description = "When Anime Deos Not Exist in The Database") })
     @DeleteMapping(path = "admin/{id}")
     public ResponseEntity<Anime> delete(@PathVariable Long id) {
         log.info("Endpoit DELETE => {}", id);

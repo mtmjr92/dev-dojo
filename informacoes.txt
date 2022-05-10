@@ -96,3 +96,8 @@ Spring Boot 2 Essentials 46 - Documentação com SpringDoc OpenAPI pt 01
 
 - https://springdoc.org/ (swager foi atualizado)
 -CRTL + ALT + V -> pom.xml criar um pro
+
+Spring Boot 2 Essentials 47 - Documentação com SpringDoc OpenAPI pt 02
+
+- http://localhost:8080/swagger-ui.html
+- http://localhost:8080/v3/api-docs

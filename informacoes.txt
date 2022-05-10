@@ -91,3 +91,8 @@ Spring Boot 2 Essentials 40 - Spring Security pt 01 - CSRF Token
 
 - pode ser desabilitado por padrao no sptring
 - CSRF Token (cross-site request forgery) - alguem executa uma ação em seu nome
+
+Spring Boot 2 Essentials 46 - Documentação com SpringDoc OpenAPI pt 01
+
+- https://springdoc.org/ (swager foi atualizado)
+-CRTL + ALT + V -> pom.xml criar um pro

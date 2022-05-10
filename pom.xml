@@ -10,6 +10,7 @@
     <properties>
         <java.version>11</java.version>
         <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
+        <springdoc-openapi-ui.version>1.6.8</springdoc-openapi-ui.version>
     </properties>
 
     <!-- configuração inicial do projeto MAVEN -->
@@ -20,6 +21,27 @@
     </parent>
 
     <dependencies>
+        <!-- documentcao do projeto -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-ui</artifactId>
+            <version>${springdoc-openapi-ui.version}</version>
+        </dependency>
+
+        <!-- ignorar alguns parametros como @Pageable -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-data-rest</artifactId>
+            <version>${springdoc-openapi-ui.version}</version>
+        </dependency>
+
+        <!-- ignorar @AuthenticationPrincipal -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-security</artifactId>
+            <version>${springdoc-openapi-ui.version}</version>
+        </dependency>
+
         <!-- dependencia inicial do projeto -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

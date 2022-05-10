@@ -109,3 +109,10 @@ Spring Boot 2 Essentials 48 - Spring Boot Actuator
 - http://localhost:8080/actuator/info
 - http://localhost:8080/actuator/metrics
 - http://localhost:8080/actuator/metrics/process.cpu.usage
+
+Spring Boot 2 Essentials 49 - Monitorando aplicação com prometheus
+
+- https://prometheus.io/
+- http://localhost:8080/actuator/prometheus
+- docker-compose up
+- http://localhost:9090/targets

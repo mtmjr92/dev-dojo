@@ -116,3 +116,8 @@ Spring Boot 2 Essentials 49 - Monitorando aplicação com prometheus
 - http://localhost:8080/actuator/prometheus
 - docker-compose up
 - http://localhost:9090/targets
+
+Spring Boot 2 Essentials 50 - Monitorando métricas com gráficos no Grafana
+
+- https://grafana.com/
+- https://grafana.com/grafana/dashboards/4701
